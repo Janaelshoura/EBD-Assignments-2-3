@@ -26,3 +26,4 @@ export function start() {
     renderItems(matching());
   });
 }
+start();
