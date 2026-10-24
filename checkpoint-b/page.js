@@ -20,7 +20,6 @@ export function matching() {
 }
 
 export function start() {
-  renderItems(items);
 
   document.querySelector("#select").addEventListener("click", () => {
     renderItems(matching());
