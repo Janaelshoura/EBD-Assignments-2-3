@@ -82,7 +82,7 @@ Modules 09 onwards have pages you look at as well as tests you run:
 ```bash
 npm run open 11            # that module's example page
 npm run open 11 exercise   # your own page
-npm run open b             # your checkpoint B page
+npm run open b             # open checkpoint B in your browser
 ```
 
 ## How this is graded
