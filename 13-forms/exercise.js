@@ -1,3 +1,4 @@
+
 export function readForm() {
   const name = document.querySelector("#name").value.trim();
   const price = Number(document.querySelector("#price").value);
@@ -12,7 +13,6 @@ export function clearForm() {
 
 export function renderList(items) {
   const list = document.querySelector("#list");
-
   list.innerHTML = "";
 
   for (const item of items) {
@@ -34,7 +34,6 @@ export function renderList(items) {
 export function wireForm() {
   const form = document.querySelector("#product-form");
   const error = document.querySelector("#error");
-
   const items = [];
 
   form.addEventListener("submit", (event) => {
@@ -47,13 +46,16 @@ export function wireForm() {
       return;
     }
 
-    if (!document.querySelector("#price").value || !Number.isFinite(price) || price <= 0) {
+    if (
+      !document.querySelector("#price").value ||
+      !Number.isFinite(price) ||
+      price <= 0
+    ) {
       error.textContent = "Give the product a price.";
       return;
     }
 
     error.textContent = "";
-
     items.push({ name, price });
     renderList(items);
     clearForm();
